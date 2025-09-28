@@ -34,6 +34,25 @@
 
     <!-- TASK LIST -->
     <ul id="taskList" class="space-y-3"></ul>
-  </main>
+    </main>
+<script>
+    // Sample tasks
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [
+      { id: 1, name: "Finish homework", due: "2025-10-01", status: "pending" },
+      { id: 2, name: "Read a book", due: "2025-10-02", status: "completed" },
+      { id: 3, name: "Grocery shopping", due: "2025-10-03", status: "pending" },
+      { id: 4, name: "Workout", due: "2025-10-04", status: "pending" },
+      { id: 5, name: "Call mom", due: "2025-10-05", status: "completed" }
+    ];
+
+    const taskForm = document.getElementById('taskForm');
+    const taskNameInput = document.getElementById('taskName');
+    const dueDateInput = document.getElementById('dueDate');
+    const taskList = document.getElementById('taskList');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    let currentFilter = 'all';
+
+  </script>
 </body>
 </html>
