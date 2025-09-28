@@ -104,7 +104,7 @@
           }
         });
 
-  //       // taskList.appendChild(li);
+  taskList.appendChild(li);
       });
     }
 
@@ -123,21 +123,16 @@
       taskForm.reset();
     });
 
-  //   // Filters
-  //   filterButtons.forEach(btn => {
-  //     btn.addEventListener('click', () => {
-  //       currentFilter = btn.dataset.filter;
-  //       renderTasks();
-  //     });
-  //   });
+  //  Filters
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentFilter = btn.dataset.filter;
+        renderTasks();
+      });
+    });
 
-  //   // Initial render
-  //   renderTasks();
-  // </script>
-
-
-
-
-  </script>
+    // Initial render
+    renderTasks();
+   </script>
 </body>
 </html>
