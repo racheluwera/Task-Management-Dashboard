@@ -105,23 +105,23 @@
         });
 
   //       // taskList.appendChild(li);
-  //     });
-  //   }
+      });
+    }
 
   //   // Add new task
-  //   taskForm.addEventListener('submit', e => {
-  //     e.preventDefault();
-  //     const name = taskNameInput.value.trim();
-  //     const due = dueDateInput.value;
-  //     if(!name) {
-  //       alert("Task name cannot be empty");
+    taskForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = taskNameInput.value.trim();
+      const due = dueDateInput.value;
+      if(!name) {
+        alert("Task name cannot be empty");
 
-  //     };
-  //     tasks.push(newTask);
-  //     saveTasks();
-  //     renderTasks();
-  //     taskForm.reset();
-  //   });
+      };
+      tasks.push(newTask);
+      saveTasks();
+      renderTasks();
+      taskForm.reset();
+    });
 
   //   // Filters
   //   filterButtons.forEach(btn => {
