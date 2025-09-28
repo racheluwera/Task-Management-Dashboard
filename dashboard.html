@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="bg-indigo-600 text-white p-6 shadow-md">
+    <button onclick="history.back()" class=" text-white-600 px-4 py-2 rounded-md hover:bg-gray-100 transition">
+    ← Back
+  </button>
+    <h1 class="text-2xl md:text-3xl font-bold text-center">Task Management Dashboard</h1>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-1 max-w-4xl mx-auto p-6">
+    <!-- ADD TASK FORM -->
+    <form id="taskForm" class="bg-white p-4 rounded-md shadow mb-6 flex flex-col md:flex-row gap-3">
+      <input type="text" id="taskName" placeholder="Task Name" class="flex-1 border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400" required>
+      <input type="date" id="dueDate" class="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+      <button type="submit" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Add Task</button>
+    </form>
+
+    <!-- FILTERS -->
+    <div class="flex gap-3 mb-4">
+      <button data-filter="all" class="filter-btn bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">All</button>
+      <button data-filter="pending" class="filter-btn bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">Pending</button>
+      <button data-filter="completed" class="filter-btn bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">Completed</button>
+    </div>
+
+    <!-- TASK LIST -->
+    <ul id="taskList" class="space-y-3"></ul>
+  </main>
+</body>
+</html>
