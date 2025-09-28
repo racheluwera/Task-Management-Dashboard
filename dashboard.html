@@ -52,6 +52,27 @@
     const filterButtons = document.querySelectorAll('.filter-btn');
 
     let currentFilter = 'all';
+    
+    // Save to localStorage
+    function saveTasks() {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    // Render tasks
+    function renderTasks() {
+      taskList.innerHTML = '';
+      let filteredTasks = tasks.filter(task => {
+        if(currentFilter === 'all') return true;
+        return task.status === currentFilter;
+      });
+
+      filteredTasks.sort((a, b) => new Date(a.due) - new Date(b.due));
+
+      filteredTasks.forEach(task => {
+        const li = document.createElement('li');
+        li.className = `bg-white p-4 rounded-md shadow flex justify-between items-center transition-all ${task.status === 'completed' ? 'line-through bg-green-100' : ''}`;
+
+
 
   </script>
 </body>
