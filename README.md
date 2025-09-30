@@ -15,7 +15,7 @@ The **Task Management Dashboard** is a simple web application designed to help u
 ---
 
 ## Screenshots
-![Dashboard Screenshot](![alt text](image.png)-dashboard.png)  
+![Dashboard Screenshot](![alt text](image-2.png))  
 *Screenshot of the dashboard showing tasks and their statuses.*
 
 ---
