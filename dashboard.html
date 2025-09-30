@@ -10,9 +10,11 @@
 
   <!-- HEADER -->
   <header class="bg-indigo-600 text-white p-6 shadow-md">
-    <button onclick="history.back()" class=" text-white-600 px-4 py-2 rounded-md hover:bg-gray-100 transition">
-    ← Back
-  </button>
+    <button onclick="history.back()" 
+        class="text-gray-600 px-4 py-2 rounded-md hover:bg-gray-100 transition">
+  ← Back
+</button>
+
     <h1 class="text-2xl md:text-3xl font-bold text-center">Task Management Dashboard</h1>
   </header>
 
@@ -113,6 +115,7 @@
       e.preventDefault();
       const name = taskNameInput.value.trim();
       const due = dueDateInput.value;
+      const newTask = { id: Date.now(), name, due, completed: false };
       if(!name) {
         alert("Task name cannot be empty");
 
